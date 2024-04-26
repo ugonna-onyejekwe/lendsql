@@ -1,0 +1,31 @@
+@import "../../constant.scss";
+
+.box {
+  background: $white;
+  box-shadow: 0 0 5px $box_shadow;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 30px;
+  min-width: 200px;
+  flex: 1;
+
+  .img_con {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  p {
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 15px 0;
+    font-size: 13px;
+  }
+  h3 {
+    font-size: 18px;
+    color: $dark_text_color;
+  }
+}

@@ -1,0 +1,136 @@
+@import "../../constant.scss";
+
+.status {
+  border-radius: 30px;
+  width: fit-content;
+  text-transform: capitalize;
+
+  p {
+    padding: 5px 15px;
+    border-radius: 20px;
+  }
+}
+
+.table_data {
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.user_dropdown {
+  position: relative;
+  &:hover article {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  small {
+    cursor: pointer;
+  }
+
+  article {
+    position: absolute;
+    background: $white;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 5px $box_shadow;
+    right: 8px;
+    top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+
+    p {
+      background: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+      cursor: pointer;
+      span {
+        line-height: 0;
+      }
+    }
+  }
+}
+
+.table {
+  background: $white;
+
+  td,
+  th {
+    background: $white !important;
+    color: $text_color !important;
+  }
+}
+
+.filter_drop {
+  padding: 20px;
+  width: 300px;
+  z-index: -1;
+
+  select {
+    width: 100%;
+    border: 1px solid $border_color;
+    padding: 10px;
+    border-radius: 5px;
+
+    option {
+      padding: 5px 0;
+    }
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $text_color;
+    }
+  }
+
+  .input_box {
+    padding-bottom: 10px;
+    h4 {
+      font-weight: 400;
+      color: $text_color;
+      text-transform: capitalize;
+      font-size: 13px;
+    }
+
+    input {
+      padding: 10px;
+      width: 100%;
+      border: 1px solid $border_color;
+      border-radius: 5px;
+    }
+
+    .select {
+      width: 100%;
+    }
+  }
+
+  .btn_con {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    button {
+      flex: 1;
+      padding: 15px 0;
+      border-radius: 5px;
+      background: transparent;
+      text-transform: capitalize;
+
+      &:first-child {
+        border: 1px solid $text_color;
+      }
+      &:last-child {
+        color: $white;
+        background: $primary_color;
+      }
+    }
+  }
+}

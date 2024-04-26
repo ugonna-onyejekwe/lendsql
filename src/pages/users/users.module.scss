@@ -1,0 +1,135 @@
+@import "../../constant.scss";
+.users_page_con {
+  width: 100%;
+  height: fit-content;
+
+  .header {
+    h4 {
+      text-transform: capitalize;
+      color: $text_color;
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+
+  .box_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+    @media (max-width: 768px) {
+      gap: 10px;
+    }
+  }
+
+  .users_section {
+    margin-top: 40px;
+    box-shadow: 0 0 5px $box_shadow;
+    border-radius: 5px;
+    background: $white;
+    padding: 30px;
+
+    .main_wrapper {
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+
+    .box_con {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      .box {
+        min-width: 150px;
+        width: 150px;
+        flex: 1;
+
+        &:last-child {
+          min-width: 150px;
+          width: 150px;
+          flex: none;
+        }
+      }
+
+      &.header {
+        padding: 15px 0;
+        .box {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          h4 {
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 15px;
+            color: $text_color;
+          }
+        }
+      }
+      &.user {
+        &:not(:last-child) {
+          border-bottom: 1px solid $border_color;
+          padding: 10px 0;
+        }
+
+        .box {
+          &:last-child {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            position: relative;
+
+            p {
+              text-transform: capitalize;
+              padding: 10px 15px;
+              border-radius: 30px;
+            }
+
+            .drop_down {
+              &:hover article {
+                opacity: 1;
+                visibility: visible;
+              }
+
+              small {
+                cursor: pointer;
+              }
+
+              article {
+                position: absolute;
+                background: $white;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 0 5px $box_shadow;
+                right: 10px;
+                top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                z-index: 1;
+                opacity: 0;
+                visibility: hidden;
+
+                p {
+                  background: none;
+                  padding: 0;
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+                  white-space: nowrap;
+                  cursor: pointer;
+                  span {
+                    line-height: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
