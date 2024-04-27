@@ -1,7 +1,7 @@
 import S from "./dashboard.module.scss";
 import { Outlet } from "react-router-dom";
 import { Navbar, SideBar } from "../../components";
-import { MdArrowBackIos } from "react-icons/md";
+import { IoIosArrowBack } from "react-icons/io";
 import { useState } from "react";
 
 export const Dashboard = () => {
@@ -27,7 +27,7 @@ export const Dashboard = () => {
               setIsActive(!isActive);
             }}
           >
-            <MdArrowBackIos className={S.icon} />
+            <IoIosArrowBack className={S.icon} />
           </div>
           <SideBar />
         </div>
